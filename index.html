@@ -1,51 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego de Memoria</title>
+    <title>Juego de Memoria Premium</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <section class="section1">
+    <main class="container">
+        <section class="game-section">
             <h1>Juego de Memoria</h1>
-            <table>
-                <tr>
-                    <td><button id="0" onclick="destapar(0)"></button></td>
-                    <td><button id="1" onclick="destapar(1)"></button></td>
-                    <td><button id="2" onclick="destapar(2)"></button></td>
-                    <td><button id="3" onclick="destapar(3)"></button></td>
-                </tr>
-                <tr>
-                    <td><button id="4" onclick="destapar(4)"></button></td>
-                    <td><button id="5" onclick="destapar(5)"></button></td>
-                    <td><button id="6" onclick="destapar(6)"></button></td>
-                    <td><button id="7" onclick="destapar(7)"></button></td>
-                </tr>
-                <tr>
-                    <td><button id="8" onclick="destapar(8)"></button></td>
-                    <td><button id="9" onclick="destapar(9)"></button></td>
-                    <td><button id="10" onclick="destapar(10)"></button></td>
-                    <td><button id="11" onclick="destapar(11)"></button></td>
-                </tr>
-                <tr>
-                    <td><button id="12" onclick="destapar(12)"></button></td>
-                    <td><button id="13" onclick="destapar(13)"></button></td>
-                    <td><button id="14" onclick="destapar(14)"></button></td>
-                    <td><button id="15" onclick="destapar(15)"></button></td>
-                </tr>
-            </table>
+            <div id="board" class="board">
+                <!-- El tablero se genera dinámicamente con JavaScript -->
+            </div>
+            <button id="reset-btn" class="reset-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                Reiniciar Juego
+            </button>
         </section>
-        <section class="section2">
-            <h2 id="aciertos" class="estadisticas">Aciertos: 0</h2>
-            <h2 id="t-restante" class="estadisticas">Tiempo: 30 segundos</h2>
-            <h2 id="movimientos" class="estadisticas">Movimientos: 0</h2>
+        
+        <section class="stats-section">
+            <div class="stat-box">
+                <span class="stat-label">Aciertos</span>
+                <span id="aciertos" class="stat-value">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Tiempo</span>
+                <span id="t-restante" class="stat-value">30s</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Movimientos</span>
+                <span id="movimientos" class="stat-value">0</span>
+            </div>
         </section>
     </main>
     <footer>
         <p>Juego Programado por 👉 <a href="#">Jordy Prada</a></p>
     </footer>
+    <script src="main.js"></script>
 </body>
-<script src="main.js"></script>
 </html>
